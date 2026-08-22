@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>  </title>
+    </head>
+    <body>
+            <h2> Javascript User Input</h2>
+            <button Onclick="getInput()">
+                Enter Details
+            </button>
+            <p id="result">
+            <script>
+                function getInput()
+                {
+                    let name = prompt("Enter a name");
+                    let age = prompt("Enter a age");
+                   documentgetElementById("result").innerHTML="name:"+name+"<br>"+age+"age"
+                }
+            </script>
+            </p>
+    </body>
+</html>

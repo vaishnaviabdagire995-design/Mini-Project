@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ATLAS UNFOLDED</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial;
+    background: #f5f7f2;
+    color: #222;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    padding: 18px 7%;
+    background: #10251d;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+header span, footer span {
+    color: #a8e063;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+.nav-links a 
+             {
+                color: white;
+                text-decoration: none;
+                font-size: 15px;
+                transition:0.3s;
+             }
+             .nav-links a:hover
+             {
+                color:rgb(65, 161, 206);
+             }
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn {
+    background: #a8e063;
+    color: #c3eed1;
+    padding: 11px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.hero {
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 8%;
+    background: linear-gradient(#0007,#0007),
+    url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1600&q=80")
+    center/cover;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin: 15px 0;
+}
+.hero p
+{
+ color:rgb(222, 219, 231);
+}
+
+section {
+    padding: 80px 7%;
+    text-align: center;
+}
+
+section > h2 {
+    font-size: 38px;
+    margin-bottom: 35px;
+}
+
+.cards, .packages {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    width: 300px;
+    padding-bottom: 25px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px #0002;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.card h3, .card p {
+    margin: 15px;
+}
+
+.dark {
+    background: #10251d;
+    color: white;
+}
+
+.packages div {
+    background: white;
+    color: #222;
+    padding: 30px;
+    width: 260px;
+    border-radius: 15px;
+}
+
+.packages b {
+    color: #5b9132;
+    font-size: 25px;
+}
+
+.about {
+    background: #e8f3df;
+}
+
+.booking input,
+.booking select {
+    padding: 13px;
+    margin: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+footer {
+    background: #10251d;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+footer p {
+    margin-top: 12px;
+}
+
+@media(max-width:700px) {
+    nav {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    header {
+        padding: 18px 5%;
+    }
+}
+</style>
+<body>
+
+<header>
+    <h2>ATLAS<span>UNFOLDED</span></h2>
+    <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#packages">Packages</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn secondary btn" href="#booking">Book Now</a>
+</header>
+
+<section id="home" class="hero">
+    <div>
+        <p>EXPLORE • DREAM • TRAVEL</p>
+        <h1>Discover Your<br>Next Adventure</h1>
+        <p>Explore beautiful places and create unforgettable memories.</p>
+        <a class="btn" href="#destinations">Explore Now</a>
+    </div>
+</section>
+
+<section id="destinations">
+    <h2>Popular Destinations</h2>
+
+    <div class="cards">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80">
+            <h3>Bali</h3>
+            <p>Beaches • Nature • Adventure</p>
+            <a class="btn" href="#booking">Book Now</a>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80">
+            <h3>Paris</h3>
+            <p>Romance • Art • Culture</p>
+            <a class="btn" href="#booking">Book Now</a>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1527668752968-14dc70a27c95?auto=format&fit=crop&w=600&q=80">
+            <h3>Switzerland</h3>
+            <p>Mountains • Lakes • Snow</p>
+            <a class="btn" href="#booking">Book Now</a>
+        </div>
+    </div>
+</section>
+
+<section id="packages" class="dark">
+    <h2>Travel Packages</h2>
+
+    <div class="packages">
+        <div>🌿 <h3>Basic</h3><b>₹9,999</b><p>3 Days • Hotel • Breakfast</p></div>
+        <div>✈️ <h3>Premium</h3><b>₹19,999</b><p>5 Days • Hotel • Tours</p></div>
+        <div>💎 <h3>Luxury</h3><b>₹39,999</b><p>7 Days • 5-Star • VIP</p></div>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <h2>Why TravelGo?</h2>
+    <p>We make your journey easy, exciting and memorable.</p>
+    <p>🌍 120+ Destinations &nbsp; ⭐ 4.9/5 Rating &nbsp; ❤️ 25K+ Travelers</p>
+</section>
+
+<section id="booking" class="booking">
+    <h2>Book Your Trip</h2>
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Email">
+    <select>
+        <option>Select Destination</option>
+        <option>Bali</option>
+        <option>Paris</option>
+        <option>Switzerland</option>
+    </select>
+    <input type="date">
+    <button class="btn">Confirm Booking</button>
+</section>
+
+<footer id="contact">
+    <h2>ATLAS<span>UNFOLDED</span></h2>
+    <p>📞 +91 98765 43210 | ✉ atlasunfolded@gmail.com</p>
+    <p>© 2026 atlasunfolded | Explore the World 🌎</p>
+</footer>
+
+</body>
+</html>
